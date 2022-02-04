@@ -10,17 +10,13 @@
                        FontSize="Medium"
                        BackgroundColor="Bisque">
                     <Label.GestureRecognizers>
-                        
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                     </Label.GestureRecognizers>
                     
                 </Label>
-                <Button x:Name="timer_btn" 
-                            Text="Naita info"
-                            FontSize="Large"
-                            Clicked="timer_btn_Clicked">
-                        
-                 </Button>
+                <Button x:Name="timer_btn" Text="Naita info" FontSize="Large" Clicked="timer_btn_Clicked"></Button>
             </FlexLayout>
+            <Button x:Name="tagasi" Text="tagasi" FontSize="Large" Clicked="tagasiClicked"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

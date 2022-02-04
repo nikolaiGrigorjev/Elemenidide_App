@@ -17,9 +17,40 @@ namespace Elemenidide_App
             InitializeComponent();
         }
 
-        private async void timer_btn_Clicked(object sender, EventArgs e)
+        bool on_off = true;
+
+        private async void ShowTime()
         {
-            await Navigation.PushAsync(new MainPage());
+            while(on_off)
+            {
+                timer_btn.Text = DateTime.Now.ToString("T");
+                await Task.Delay(1000);
+            }
+
+        }
+
+
+        private void timer_btn_Clicked(object sende,EventArgs e)
+        {
+            if(on_off)
+            {
+                on_off = false;
+            }
+            else
+
+            {
+                on_off = true;
+                ShowTime();
+
+            }
+
+        }
+
+       
+
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            lbl.Text = "Valjutatud";
         }
     }
 }

@@ -13,7 +13,7 @@ namespace Elemenidide_App
         public MainPage()
         {
             //InitializeComponent();
-            StackLayout st = new StackLayout();
+           
             Button Ent_btn = new Button
             {
                 Text = "Entry",
@@ -24,12 +24,22 @@ namespace Elemenidide_App
                 Text = "Entry",
                 BackgroundColor = Color.AliceBlue
             };
-            st.Children.Add(Ent_btn);
-            st.Children.Add(Timer_btn);
+
+            StackLayout st = new StackLayout
+            {
+                Children = { Ent_btn, Timer_btn }
+            };
+
             st.BackgroundColor = Color.PaleGreen;
             Content = st;
             Ent_btn.Clicked += Ent_btn_Clicked;
+            Timer_btn.Clicked += Timer_btn_Clicked;
 
+            
+        }
+
+        private void Timer_btn_Clicked(object sender, EventArgs e)
+        {
             
         }
 
